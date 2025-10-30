@@ -7,7 +7,7 @@ const HomePage: React.FC = () => {
     <>
       {/* HERO SECTION */}
       <header className="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(https://storage.googleapis.com/aistudio-hosting/prompts/images/1722300057134_congresso-nacional-01.jpeg)` }}></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(https://storage.googleapis.com/aistudio-hosting/prompts/images/1722300057134_congresso-nacional-01.jpeg)` }} aria-label="Imagem do Congresso Nacional ilustrando assessoria parlamentar"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-azul opacity-70"></div>
         <div className="relative z-10 px-4">
           <AnimatedElement as="h1" animation="up" className="font-playfair text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight">
@@ -42,7 +42,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* CTA SECTION */}
-      <section className="bg-gray-800 py-20 lg:py-24 text-white text-center bg-cover bg-center" style={{backgroundImage: 'linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url(https://storage.googleapis.com/aistudio-hosting/prompts/images/1722300057142_congresso-nacional-02.jpeg)'}}>
+      <section className="bg-gray-800 py-20 lg:py-24 text-white text-center bg-cover bg-center" style={{backgroundImage: 'linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url(https://storage.googleapis.com/aistudio-hosting/prompts/images/1722300057142_congresso-nacional-02.jpeg)'}} aria-label="Imagem de fundo do Congresso Nacional para seção de contato">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
           <AnimatedElement animation="fade" as="h2" className="text-3xl md:text-4xl font-playfair font-bold mb-8">
             Precisa de ajuda com decisões políticas? Fale com a gente.

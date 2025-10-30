@@ -4,6 +4,7 @@ import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+import ErrorBoundary from './components/ErrorBoundary';
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const ServicosPage = lazy(() => import('./pages/ServicosPage'));
@@ -32,8 +33,10 @@ function App() {
     <HashRouter>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen bg-gray-50">
+        <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-azul text-white px-4 py-2 rounded z-50">Pular para conteúdo principal</a>
         <Nav />
-        <main className="flex-grow">
+        <main id="main" className="flex-grow">
+          <ErrorBoundary>
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -43,6 +46,7 @@ function App() {
               <Route path="/contato" element={<ContatoPage />} />
             </Routes>
           </Suspense>
+        </ErrorBoundary>
         </main>
         <Footer />
       </div>

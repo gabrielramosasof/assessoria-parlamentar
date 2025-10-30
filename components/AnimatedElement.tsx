@@ -60,4 +60,4 @@ const AnimatedElement = <C extends React.ElementType = 'div'>({
   );
 };
 
-export default AnimatedElement;
+export default React.memo(AnimatedElement);

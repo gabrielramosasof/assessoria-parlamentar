@@ -2,19 +2,80 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+# Assessoria Parlamentar
 
-This contains everything you need to run your app locally.
+Website institucional para assessoria parlamentar especializada em assuntos legislativos.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1zu9gV6OTvVksODgqN5Aejb3nCBYmpflS
+## 🚀 Deploy
+
+**Aplicação ao vivo:** https://assessoria-parlamentar-nyaafil1p-gaya-lex.vercel.app
+
+## 📋 Sobre o Projeto
+
+Este projeto contém uma aplicação React moderna construída com Vite, TypeScript e Tailwind CSS, oferecendo uma experiência completa para assessoria parlamentar.
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
+### Option 1: Using Node.js directly
 
+**Prerequisites:** Node.js
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+   ```bash
+   npm install
+   ```
+2. Run the app:
+   ```bash
+   npm run dev
+   ```
+
+### Option 2: Using Docker (Recommended)
+
+**Prerequisites:** Docker and Docker Compose
+
+#### Development with hot reloading:
+```bash
+docker-compose up --build
+```
+The app will be available at http://localhost:3000
+
+#### Production build:
+```bash
+docker-compose -f docker-compose.prod.yml up --build
+```
+The app will be available at http://localhost
+
+#### Additional commands:
+```bash
+# Run tests
+docker-compose exec app npm test
+
+# Run linting
+docker-compose exec app npm run lint
+
+# Build for production
+docker-compose exec app npm run build
+```
+
+## 🚀 Deploy
+
+### Vercel (Recomendado)
+
+A aplicação está configurada para deploy automático no Vercel:
+
+1. **Deploy automático:** Conectado ao repositório GitHub
+2. **URL de produção:** https://assessoria-parlamentar-nyaafil1p-gaya-lex.vercel.app
+3. **Configuração:** `vercel.json` com otimizações SPA
+
+### Deploy Manual
+
+```bash
+# Instalar Vercel CLI
+npm install -g vercel
+
+# Fazer login
+vercel login
+
+# Deploy
+vercel --prod
+```
