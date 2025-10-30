@@ -23,3 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 .vercel
+
+# Testing
+test-results/
+playwright-report/
+playwright/.cache/
+*.spec.ts-snapshots/
+tests/e2e/.env
